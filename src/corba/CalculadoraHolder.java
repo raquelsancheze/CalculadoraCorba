@@ -1,4 +1,4 @@
-package calc;
+package corba;
 
 /**
 * calc/CalculadoraHolder.java .
@@ -9,30 +9,30 @@ package calc;
 
 public final class CalculadoraHolder implements org.omg.CORBA.portable.Streamable
 {
-  public calc.Calculadora value = null;
+  public corba.Calculadora value = null;
 
   public CalculadoraHolder ()
   {
   }
 
-  public CalculadoraHolder (calc.Calculadora initialValue)
+  public CalculadoraHolder (corba.Calculadora initialValue)
   {
     value = initialValue;
   }
 
   public void _read (org.omg.CORBA.portable.InputStream i)
   {
-    value = calc.CalculadoraHelper.read (i);
+    value = corba.CalculadoraHelper.read (i);
   }
 
   public void _write (org.omg.CORBA.portable.OutputStream o)
   {
-    calc.CalculadoraHelper.write (o, value);
+    corba.CalculadoraHelper.write (o, value);
   }
 
   public org.omg.CORBA.TypeCode _type ()
   {
-    return calc.CalculadoraHelper.type ();
+    return corba.CalculadoraHelper.type ();
   }
 
 }

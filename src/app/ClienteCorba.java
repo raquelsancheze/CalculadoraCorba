@@ -1,8 +1,8 @@
 
 package app;
 
-import calc.Calculadora;
-import calc.CalculadoraHelper;
+import corba.Calculadora;
+import corba.CalculadoraHelper;
 import org.omg.CORBA.ORB;
 import org.omg.CORBA.Object;
 import org.omg.CosNaming.NamingContextExt;
@@ -22,7 +22,7 @@ public class ClienteCorba {
             
             ORB orb = ORB.init(args, System.getProperties());
             
-            Object objRef = orb.resolve_initial_references("CalculadoraService");
+            Object objRef = orb.resolve_initial_references("NameService");
             
             NamingContextExt ncRef = NamingContextExtHelper.narrow(objRef);
             

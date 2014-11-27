@@ -1,4 +1,4 @@
-package calc;
+package corba;
 
 
 /**
@@ -8,7 +8,7 @@ package calc;
 * Quarta-feira, 26 de Novembro de 2014 17h08min05s BRST
 */
 
-public class _CalculadoraStub extends org.omg.CORBA.portable.ObjectImpl implements calc.Calculadora
+public class _CalculadoraStub extends org.omg.CORBA.portable.ObjectImpl implements corba.Calculadora
 {
 
   public int somar (int valor1, int valor2)

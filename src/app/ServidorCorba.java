@@ -1,7 +1,7 @@
 package app;
 
-import calc.Calculadora;
-import calc.CalculadoraHelper;
+import corba.Calculadora;
+import corba.CalculadoraHelper;
 import calculadoracorba.CalculadoraCORBA;
 import org.omg.CORBA.ORB;
 import org.omg.PortableServer.POA;
@@ -32,7 +32,7 @@ public class ServidorCorba {
 
             Calculadora href = CalculadoraHelper.narrow(ref);
 
-            Object objRef = orb.resolve_initial_references("CalculadoraService");
+            Object objRef = orb.resolve_initial_references("NameService");
 
             NamingContextExt ncRef = NamingContextExtHelper.narrow(objRef);
 

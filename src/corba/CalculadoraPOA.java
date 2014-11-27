@@ -1,4 +1,4 @@
-package calc;
+package corba;
 
 
 /**
@@ -9,7 +9,7 @@ package calc;
 */
 
 public abstract class CalculadoraPOA extends org.omg.PortableServer.Servant
- implements calc.CalculadoraOperations, org.omg.CORBA.portable.InvokeHandler
+ implements corba.CalculadoraOperations, org.omg.CORBA.portable.InvokeHandler
 {
 
   // Constructors

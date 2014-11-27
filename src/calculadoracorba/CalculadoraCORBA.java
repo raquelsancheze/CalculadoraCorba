@@ -1,7 +1,7 @@
 
 package calculadoracorba;
 
-import calc.CalculadoraPOA;
+import corba.CalculadoraPOA;
 import org.omg.CORBA.ORB;
 
 /**
