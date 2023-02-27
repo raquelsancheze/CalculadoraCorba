@@ -2,7 +2,7 @@
 
 
 
-Información general
+### Información general
 
 La calculadora está implementada en Java empleando CORBA para la comunicación entre cliente y servidor.
 
