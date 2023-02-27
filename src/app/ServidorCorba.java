@@ -20,7 +20,7 @@ public class ServidorCorba {
     public static void main(String[] args) {
 
         try {
-            ORB orb = ORB.init(args, System.getProperties());
+            ORB orb = ORB.init(args, System.getProperties()); //Inicializamos ORB
 
             POA rootPOA = POAHelper.narrow(orb.resolve_initial_references("RootPOA"));
 
@@ -28,7 +28,7 @@ public class ServidorCorba {
 
             calculadora.setOrb(orb);
 
-            Object ref = rootPOA.servant_to_reference(calculadora);
+            Object ref = rootPOA.servant_to_reference(calculadora); //Se hace la referncia al objeto
 
             Calculadora href = CalculadoraHelper.narrow(ref);
 
