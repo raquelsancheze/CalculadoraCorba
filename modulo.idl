@@ -4,5 +4,6 @@ module calc{
 			long subtrair(in long valor1,in long valor2);
 			long multiplicar(in long valor1, in long valor2);
 			double dividir(in long valor1, in long valor2);
+			double decimalABinario(in long valor);
 	};
 };
