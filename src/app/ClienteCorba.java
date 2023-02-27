@@ -20,9 +20,9 @@ public class ClienteCorba {
         
         try{
             
-            ORB orb = ORB.init(args, System.getProperties());
+            ORB orb = ORB.init(args, System.getProperties()); //Se inicializa el ORB
             
-            Object objRef = orb.resolve_initial_references("NameService");
+            Object objRef = orb.resolve_initial_references("NameService"); //Se hace la referencia al objeto
             
             NamingContextExt ncRef = NamingContextExtHelper.narrow(objRef);
             
@@ -30,7 +30,7 @@ public class ClienteCorba {
             
             calculadora = CalculadoraHelper.narrow(ncRef.resolve_str(name));
             
-            System.out.println(calculadora.somar(2, 4));
+            System.out.println(calculadora.decimalABinario(20)); //Imprimimos el resultado de la funcion que hemos implementado
             
             
             
